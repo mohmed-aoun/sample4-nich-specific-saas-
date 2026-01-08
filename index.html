@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Omar Aoun — Freelance Full-Stack Developer for SaaS Startups</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              accent: "#06B6D4",
+            },
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui"],
+              mono: ["JetBrains Mono", "ui-monospace", "SFMono-Regular"],
+            },
+            boxShadow: {
+              soft: "0 12px 32px rgba(15, 23, 42, 0.35)",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      html:not(.dark) body {
+        background-color: #f8fafc;
+        color: #0f172a;
+      }
+      html:not(.dark) .bg-slate-950 {
+        background-color: #f8fafc !important;
+      }
+      html:not(.dark) .bg-slate-950\/90 {
+        background-color: rgba(248, 250, 252, 0.9) !important;
+      }
+      html:not(.dark) .bg-slate-900 {
+        background-color: #ffffff !important;
+      }
+      html:not(.dark) .bg-slate-900\/70 {
+        background-color: rgba(255, 255, 255, 0.7) !important;
+      }
+      html:not(.dark) .text-white {
+        color: #0f172a !important;
+      }
+      html:not(.dark) .text-slate-100 {
+        color: #0f172a !important;
+      }
+      html:not(.dark) .text-slate-200 {
+        color: #1e293b !important;
+      }
+      html:not(.dark) .text-slate-300 {
+        color: #334155 !important;
+      }
+      html:not(.dark) .text-slate-400 {
+        color: #475569 !important;
+      }
+      html:not(.dark) .border-slate-700 {
+        border-color: #e2e8f0 !important;
+      }
+      html:not(.dark) .border-slate-800 {
+        border-color: #e2e8f0 !important;
+      }
+      html:not(.dark) .border-slate-900 {
+        border-color: #e2e8f0 !important;
+      }
+      html:not(.dark) .shadow-soft {
+        box-shadow: 0 12px 32px rgba(15, 23, 42, 0.08);
+      }
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="bg-slate-950 text-slate-100 antialiased">
+    <header class="sticky top-0 z-50 border-b border-slate-800 bg-slate-950/90 backdrop-blur">
+      <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
+        <div class="flex items-center gap-3">
+          <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 text-accent">
+            OA
+          </div>
+          <div>
+            <p class="text-sm font-semibold">Omar Aoun</p>
+            <p class="text-xs text-slate-400">Full-Stack Developer</p>
+          </div>
+        </div>
+        <nav aria-label="Primary" class="hidden items-center gap-6 text-sm font-medium text-slate-200 md:flex">
+          <a class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" href="#work">Work</a>
+          <a class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" href="#services">Services</a>
+          <a class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" href="#process">Process</a>
+          <a class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" href="#about">About</a>
+          <a class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" href="#contact">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <button
+            id="theme-toggle"
+            class="hidden rounded-xl border border-slate-800 bg-slate-900 px-3 py-2 text-xs font-semibold text-slate-200 transition hover:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent md:inline-flex"
+            type="button"
+          >
+            Toggle light
+          </button>
+          <a
+            href="#contact"
+            class="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-slate-950 shadow-soft transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+          >
+            Schedule a Call
+          </a>
+        </div>
+      </div>
+      <div class="mx-auto flex max-w-6xl items-center justify-between border-t border-slate-800 px-6 py-3 text-xs text-slate-400 md:hidden">
+        <a class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" href="#work">Work</a>
+        <a class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" href="#services">Services</a>
+        <a class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" href="#process">Process</a>
+        <a class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" href="#about">About</a>
+        <a class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent" href="#contact">Contact</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="relative overflow-hidden">
+        <div class="mx-auto flex min-h-screen max-w-6xl flex-col justify-center gap-10 px-6 pb-16 pt-24">
+          <div class="grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:items-center">
+            <div class="space-y-6">
+              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">
+                Freelance Full-Stack Developer for SaaS Startups
+              </p>
+              <h1 class="text-4xl font-semibold leading-tight text-white md:text-5xl">
+                Ship your SaaS MVP with clear ownership, proof-first execution, and predictable delivery.
+              </h1>
+              <p class="text-lg text-slate-300">
+                I partner with founders to build revenue-ready products, handle the critical technical decisions,
+                and keep launches on schedule—without the agency overhead.
+              </p>
+              <div class="flex flex-wrap gap-4">
+                <a
+                  href="#contact"
+                  class="rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-slate-950 shadow-soft transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                >
+                  Schedule a Call
+                </a>
+                <a
+                  href="#work"
+                  class="rounded-xl border border-slate-800 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                >
+                  View Work
+                </a>
+              </div>
+            </div>
+            <div class="space-y-6 rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <h2 class="text-lg font-semibold text-white">Proof Strip</h2>
+              <div class="grid gap-4 text-sm text-slate-300">
+                <div class="flex items-start gap-3">
+                  <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+                  <p>Founder-owned delivery with weekly milestone demos and clear risk flags.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+                  <p>Full-stack ownership: product strategy, architecture, build, and launch support.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+                  <p>Production-ready systems with observability and handoff documentation.</p>
+                </div>
+                <div class="flex items-start gap-3">
+                  <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+                  <p>Predictable delivery windows with scope lock and change control.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="grid gap-4 rounded-xl border border-slate-800 bg-slate-900/70 p-5 text-sm text-slate-300 shadow-soft md:grid-cols-3">
+            <div>
+              <p class="font-semibold text-white">Ownership</p>
+              <p>Single-threaded lead responsible for strategy, build, and launch.</p>
+            </div>
+            <div>
+              <p class="font-semibold text-white">Predictability</p>
+              <p>Clear scope, timeline checkpoints, and decision logs.</p>
+            </div>
+            <div>
+              <p class="font-semibold text-white">Proof</p>
+              <p>Documented outcomes, demos, and post-launch support.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="work" class="border-t border-slate-900 bg-slate-950 py-16">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Work</p>
+              <h2 class="text-3xl font-semibold text-white">Three SaaS engagements built for speed and clarity.</h2>
+            </div>
+            <p class="text-sm text-slate-400">Each project includes full ownership and delivery context.</p>
+          </div>
+
+          <div class="mt-10 grid gap-6 lg:grid-cols-3">
+            <article class="flex h-full flex-col justify-between rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-white">Telemetry Workflow SaaS</h3>
+                <p class="text-sm text-slate-300">
+                  Role: Lead engineer · Stack: Next.js, Node.js, Postgres · Constraints: 6-week runway, part-time stakeholders.
+                </p>
+                <p class="text-sm text-slate-300"><span class="text-white">What I Owned:</span> Roadmap, API design, infra, QA, and launch checklist.</p>
+                <p class="text-sm text-slate-400">Outcome: MVP shipped ahead of a seed demo (placeholder).</p>
+              </div>
+              <a
+                href="#case-telemetry"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+              >
+                View case study
+              </a>
+            </article>
+            <article class="flex h-full flex-col justify-between rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-white">Usage-Based Billing Platform</h3>
+                <p class="text-sm text-slate-300">
+                  Role: Product &amp; engineering lead · Stack: Remix, Prisma, Stripe · Constraints: complex billing rules, zero ops team.
+                </p>
+                <p class="text-sm text-slate-300"><span class="text-white">What I Owned:</span> Data model, billing logic, onboarding flow, observability.</p>
+                <p class="text-sm text-slate-400">Outcome: Reduced billing errors and sped up invoicing (placeholder).</p>
+              </div>
+              <a
+                href="#case-billing"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+              >
+                View case study
+              </a>
+            </article>
+            <article class="flex h-full flex-col justify-between rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <div class="space-y-4">
+                <h3 class="text-xl font-semibold text-white">Customer Success Command Center</h3>
+                <p class="text-sm text-slate-300">
+                  Role: Full-stack partner · Stack: Laravel, Vue, Redis · Constraints: legacy data, tight security review.
+                </p>
+                <p class="text-sm text-slate-300"><span class="text-white">What I Owned:</span> Data migration plan, UI workflows, security hardening.</p>
+                <p class="text-sm text-slate-400">Outcome: Unified CS workflow with faster response times (placeholder).</p>
+              </div>
+              <a
+                href="#case-success"
+                class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+              >
+                View case study
+              </a>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section class="border-t border-slate-900 bg-slate-950 py-16">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Case Studies</p>
+              <h2 class="text-3xl font-semibold text-white">Proof-focused snapshots with clear ownership.</h2>
+            </div>
+            <p class="text-sm text-slate-400">Details provided during discovery.</p>
+          </div>
+          <div class="mt-10 grid gap-6">
+            <article id="case-telemetry" class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-white">Telemetry Workflow SaaS</h3>
+              <div class="mt-4 grid gap-4 md:grid-cols-3">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Focus</p>
+                  <p class="text-sm text-slate-300">Rebuilt core workflow to reduce manual triage and align on product analytics.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Owned</p>
+                  <p class="text-sm text-slate-300">Architecture, data contracts, release plan, stakeholder comms.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Outcome</p>
+                  <p class="text-sm text-slate-300">MVP demo-ready for investor conversations (placeholder).</p>
+                </div>
+              </div>
+            </article>
+            <article id="case-billing" class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-white">Usage-Based Billing Platform</h3>
+              <div class="mt-4 grid gap-4 md:grid-cols-3">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Focus</p>
+                  <p class="text-sm text-slate-300">Clarified pricing rules, automated invoice workflows, and alerts.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Owned</p>
+                  <p class="text-sm text-slate-300">Billing logic, onboarding UX, QA plan, error monitoring.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Outcome</p>
+                  <p class="text-sm text-slate-300">Cleaner billing ops and faster finance cycles (placeholder).</p>
+                </div>
+              </div>
+            </article>
+            <article id="case-success" class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-white">Customer Success Command Center</h3>
+              <div class="mt-4 grid gap-4 md:grid-cols-3">
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Focus</p>
+                  <p class="text-sm text-slate-300">Unified customer data and escalations into one actionable dashboard.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Owned</p>
+                  <p class="text-sm text-slate-300">Data migration, UI build, security review prep.</p>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-[0.2em] text-slate-400">Outcome</p>
+                  <p class="text-sm text-slate-300">Faster response time with fewer manual escalations (placeholder).</p>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="services" class="border-t border-slate-900 bg-slate-950 py-16">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Services</p>
+              <h2 class="text-3xl font-semibold text-white">Productized engagement options with clear outcomes.</h2>
+            </div>
+            <p class="text-sm text-slate-400">Scope locked with change control and weekly reporting.</p>
+          </div>
+          <div class="mt-10 grid gap-6 lg:grid-cols-3">
+            <article class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-white">MVP Build</h3>
+              <p class="mt-2 text-sm text-slate-300">Scope: Discovery, UX flows, core feature build, launch checklist.</p>
+              <p class="mt-2 text-sm text-slate-300">Outcome: Revenue-ready MVP with documented roadmap.</p>
+              <p class="mt-2 text-sm text-slate-300">Timeline: 6–10 weeks.</p>
+              <p class="mt-2 text-sm text-slate-300">Risk reducers: Scope lock, weekly demos, release playbook.</p>
+            </article>
+            <article class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-white">Performance &amp; Reliability Sprint</h3>
+              <p class="mt-2 text-sm text-slate-300">Scope: Audit, bottleneck fixes, observability setup, regression tests.</p>
+              <p class="mt-2 text-sm text-slate-300">Outcome: Faster load times and stable releases.</p>
+              <p class="mt-2 text-sm text-slate-300">Timeline: 2–4 weeks.</p>
+              <p class="mt-2 text-sm text-slate-300">Risk reducers: Before/after benchmarks, rollback plan.</p>
+            </article>
+            <article class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <h3 class="text-xl font-semibold text-white">Integrations &amp; Automations</h3>
+              <p class="mt-2 text-sm text-slate-300">Scope: API integrations, data syncs, automation workflows.</p>
+              <p class="mt-2 text-sm text-slate-300">Outcome: Operational hours returned to the team.</p>
+              <p class="mt-2 text-sm text-slate-300">Timeline: 2–5 weeks.</p>
+              <p class="mt-2 text-sm text-slate-300">Risk reducers: Sandbox testing, failure alerts, handoff docs.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="border-t border-slate-900 bg-slate-950 py-16">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div>
+              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Process</p>
+              <h2 class="text-3xl font-semibold text-white">Risk-reduced delivery with transparent communication.</h2>
+            </div>
+            <p class="text-sm text-slate-400">No surprises, no hidden blockers.</p>
+          </div>
+          <div class="mt-10 grid gap-6 lg:grid-cols-3">
+            <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <h3 class="text-lg font-semibold text-white">Timeline</h3>
+              <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                <li>Week 1: Discovery + technical plan.</li>
+                <li>Weeks 2–5: Build, demos, and QA.</li>
+                <li>Final week: Launch, monitoring, and handoff.</li>
+              </ul>
+            </div>
+            <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <h3 class="text-lg font-semibold text-white">Communication</h3>
+              <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                <li>Weekly roadmap update + demo video.</li>
+                <li>Daily async check-ins (Slack or email).</li>
+                <li>Decision log for scope and risk.</li>
+              </ul>
+            </div>
+            <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+              <h3 class="text-lg font-semibold text-white">Typical Delivery Window</h3>
+              <ul class="mt-3 space-y-2 text-sm text-slate-300">
+                <li>Small MVPs: 6–8 weeks.</li>
+                <li>Complex builds: 8–12 weeks.</li>
+                <li>Post-launch support: 2 weeks included.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="about" class="border-t border-slate-900 bg-slate-950 py-16">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">About</p>
+              <h2 class="mt-2 text-3xl font-semibold text-white">I help SaaS founders move from idea to launch without losing focus.</h2>
+              <p class="mt-4 text-sm text-slate-300">
+                My approach blends product strategy, hands-on engineering, and clear documentation so you always
+                know what is shipping next and why.
+              </p>
+              <div class="mt-6 flex flex-wrap gap-3">
+                <span class="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs font-mono text-slate-200">Next.js</span>
+                <span class="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs font-mono text-slate-200">Node.js</span>
+                <span class="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs font-mono text-slate-200">Postgres</span>
+                <span class="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs font-mono text-slate-200">TypeScript</span>
+                <span class="rounded-full border border-slate-700 bg-slate-900 px-3 py-1 text-xs font-mono text-slate-200">AWS</span>
+              </div>
+            </div>
+            <div class="space-y-6">
+              <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+                <h3 class="text-lg font-semibold text-white">Open Source</h3>
+                <ul class="mt-3 space-y-3 text-sm text-slate-300">
+                  <li>
+                    <a href="https://github.com/placeholder" class="text-accent hover:underline">github.com/placeholder</a>
+                    <p class="text-xs text-slate-400">Maintained utilities and starter templates (placeholder links).</p>
+                  </li>
+                  <li>
+                    <a href="https://github.com/placeholder" class="text-accent hover:underline">github.com/placeholder</a>
+                    <p class="text-xs text-slate-400">CLI tooling for SaaS workflows (placeholder links).</p>
+                  </li>
+                </ul>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+                <h3 class="text-lg font-semibold text-white">Recent activity</h3>
+                <p class="mt-2 text-sm text-slate-300">Currently shipping a new billing workflow and performance dashboard refresh.</p>
+                <p class="mt-3 text-xs uppercase tracking-[0.2em] text-slate-400">Updated this week</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="border-t border-slate-900 bg-slate-950 py-16">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
+            <div>
+              <p class="text-sm uppercase tracking-[0.2em] text-slate-400">Contact</p>
+              <h2 class="mt-2 text-3xl font-semibold text-white">Let’s map the next 90 days of your product.</h2>
+              <p class="mt-4 text-sm text-slate-300">Respond within 24h.</p>
+              <form class="mt-6 grid gap-4">
+                <div>
+                  <label class="text-sm font-medium text-slate-200" for="name">Name</label>
+                  <input
+                    id="name"
+                    name="name"
+                    type="text"
+                    required
+                    class="mt-2 w-full rounded-xl border border-slate-800 bg-slate-900 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    placeholder="Your name"
+                  />
+                </div>
+                <div>
+                  <label class="text-sm font-medium text-slate-200" for="email">Email</label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    class="mt-2 w-full rounded-xl border border-slate-800 bg-slate-900 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    placeholder="you@company.com"
+                  />
+                </div>
+                <div>
+                  <label class="text-sm font-medium text-slate-200" for="details">Project details</label>
+                  <textarea
+                    id="details"
+                    name="details"
+                    rows="4"
+                    required
+                    class="mt-2 w-full rounded-xl border border-slate-800 bg-slate-900 px-4 py-3 text-sm text-slate-100 placeholder:text-slate-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
+                    placeholder="What are you building and when do you need it live?"
+                  ></textarea>
+                </div>
+                <button
+                  type="submit"
+                  class="w-full rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-slate-950 shadow-soft transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                >
+                  Send inquiry
+                </button>
+              </form>
+            </div>
+            <div class="space-y-6">
+              <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+                <h3 class="text-lg font-semibold text-white">Calendly</h3>
+                <p class="mt-2 text-sm text-slate-300">Use this placeholder to schedule a call.</p>
+                <a
+                  href="https://calendly.com/placeholder"
+                  class="mt-4 inline-flex items-center gap-2 rounded-xl border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-200 hover:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                >
+                  calendly.com/placeholder
+                </a>
+              </div>
+              <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
+                <h3 class="text-lg font-semibold text-white">Availability</h3>
+                <p class="mt-2 text-sm text-slate-300">Next open start window: four weeks out.</p>
+                <p class="mt-2 text-sm text-slate-300">Based in GMT+2 with overlap for US/EU teams.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-900 bg-slate-950 py-10">
+      <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 text-sm text-slate-400 md:flex-row md:items-center">
+        <p>© 2024 Omar Aoun. All rights reserved.</p>
+        <div class="flex items-center gap-4">
+          <a href="#work" class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Work</a>
+          <a href="#services" class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Services</a>
+          <a href="#contact" class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      const toggleButton = document.getElementById("theme-toggle");
+      const root = document.documentElement;
+
+      toggleButton.addEventListener("click", () => {
+        root.classList.toggle("dark");
+        if (root.classList.contains("dark")) {
+          document.body.classList.remove("bg-slate-50", "text-slate-900");
+          document.body.classList.add("bg-slate-950", "text-slate-100");
+          toggleButton.textContent = "Toggle light";
+        } else {
+          document.body.classList.remove("bg-slate-950", "text-slate-100");
+          document.body.classList.add("bg-slate-50", "text-slate-900");
+          toggleButton.textContent = "Toggle dark";
+        }
+      });
+    </script>
+  </body>
+</html>
