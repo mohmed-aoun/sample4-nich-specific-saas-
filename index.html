@@ -79,7 +79,10 @@
       <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4">
         <div class="flex items-center gap-3">
           <div class="flex h-10 w-10 items-center justify-center rounded-xl border border-slate-800 bg-slate-900 text-accent">
-            OA
+            <!-- Icon added (replaces "OA" letters, still fits the badge) -->
+            <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M13 2L3 14h7l-1 8 10-12h-7l1-8z"></path>
+            </svg>
           </div>
           <div>
             <p class="text-sm font-semibold">Omar Aoun</p>
@@ -96,15 +99,65 @@
         <div class="flex items-center gap-3">
           <button
             id="theme-toggle"
-            class="hidden rounded-xl border border-slate-800 bg-slate-900 px-3 py-2 text-xs font-semibold text-slate-200 transition hover:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent md:inline-flex"
             type="button"
+            aria-label="Toggle theme"
+            class="hidden md:inline-flex items-center justify-center rounded-xl border border-slate-800 bg-slate-900 p-2 text-slate-200 transition hover:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
           >
-            Toggle light
+            <!-- Sun (shown in dark mode) -->
+            <svg
+              id="icon-sun"
+              class="h-4 w-4 hidden"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <circle cx="12" cy="12" r="4" />
+              <line x1="12" y1="1" x2="12" y2="3" />
+              <line x1="12" y1="21" x2="12" y2="23" />
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+              <line x1="1" y1="12" x2="3" y2="12" />
+              <line x1="21" y1="12" x2="23" y2="12" />
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+            </svg>
+
+
+            <!-- Moon (shown in light mode) -->
+            <svg
+              id="icon-moon"
+              class="h-4 w-4 hidden"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              aria-hidden="true"
+            >
+              <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z" />
+            </svg>
           </button>
           <a
             href="#contact"
-            class="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-slate-950 shadow-soft transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+            class="rounded-xl bg-accent px-4 py-2 text-sm font-semibold text-slate-950 shadow-soft transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent inline-flex items-center gap-2"
           >
+            <!-- Calendar icon -->
+            <svg
+              class="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+              <line x1="16" y1="2" x2="16" y2="6"></line>
+              <line x1="8" y1="2" x2="8" y2="6"></line>
+              <line x1="3" y1="10" x2="21" y2="10"></line>
+            </svg>
             Schedule a Call
           </a>
         </div>
@@ -136,52 +189,194 @@
               <div class="flex flex-wrap gap-4">
                 <a
                   href="#contact"
-                  class="rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-slate-950 shadow-soft transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                  class="rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-slate-950 shadow-soft transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent inline-flex items-center gap-2"
                 >
+                  <!-- Calendar icon -->
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
                   Schedule a Call
                 </a>
                 <a
                   href="#work"
-                  class="rounded-xl border border-slate-800 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                  class="rounded-xl border border-slate-800 px-6 py-3 text-sm font-semibold text-slate-200 transition hover:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent inline-flex items-center gap-2"
                 >
+                  <!-- View Work icon -->
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="3" width="7" height="7"></rect>
+                    <rect x="14" y="3" width="7" height="7"></rect>
+                    <rect x="3" y="14" width="7" height="7"></rect>
+                    <rect x="14" y="14" width="7" height="7"></rect>
+                  </svg>
                   View Work
                 </a>
               </div>
             </div>
             <div class="space-y-6 rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-              <h2 class="text-lg font-semibold text-white">Proof Strip</h2>
+              <h2 class="text-lg font-semibold text-white inline-flex items-center gap-2">
+                <svg
+                  class="h-5 w-5 text-accent"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M9 12l2 2 4-4"></path>
+                </svg>
+                Proof Strip
+              </h2>
               <div class="grid gap-4 text-sm text-slate-300">
                 <div class="flex items-start gap-3">
-                  <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+                  <svg
+                    class="mt-0.5 h-4 w-4 text-accent"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="8" r="3"></circle>
+                    <path d="M5 20c0-3.5 3.5-6 7-6s7 2.5 7 6"></path>
+                  </svg>
                   <p>Founder-owned delivery with weekly milestone demos and clear risk flags.</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+                  <svg
+                    class="mt-0.5 h-4 w-4 text-accent"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 2l9 5-9 5-9-5 9-5z"></path>
+                    <path d="M3 12l9 5 9-5"></path>
+                  </svg>
                   <p>Full-stack ownership: product strategy, architecture, build, and launch support.</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+                  <svg
+                    class="mt-0.5 h-4 w-4 text-accent"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 2l7 4v6c0 5-3.5 9-7 10-3.5-1-7-5-7-10V6l7-4z"></path>
+                  </svg>
                   <p>Production-ready systems with observability and handoff documentation.</p>
                 </div>
                 <div class="flex items-start gap-3">
-                  <span class="mt-1 h-2 w-2 rounded-full bg-accent"></span>
+                  <svg
+                    class="mt-0.5 h-4 w-4 text-accent"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 7v5l3 2"></path>
+                  </svg>
                   <p>Predictable delivery windows with scope lock and change control.</p>
                 </div>
               </div>
             </div>
           </div>
+
           <div class="grid gap-4 rounded-xl border border-slate-800 bg-slate-900/70 p-5 text-sm text-slate-300 shadow-soft md:grid-cols-3">
-            <div>
-              <p class="font-semibold text-white">Ownership</p>
-              <p>Single-threaded lead responsible for strategy, build, and launch.</p>
+            <div class="flex gap-3">
+              <svg
+                class="h-5 w-5 text-accent"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="8" r="3"></circle>
+                <path d="M5 20c0-3.5 3.5-6 7-6s7 2.5 7 6"></path>
+              </svg>
+              <div>
+                <p class="font-semibold text-white">Ownership</p>
+                <p>Single-threaded lead responsible for strategy, build, and launch.</p>
+              </div>
             </div>
-            <div>
-              <p class="font-semibold text-white">Predictability</p>
-              <p>Clear scope, timeline checkpoints, and decision logs.</p>
+            <div class="flex gap-3">
+              <svg
+                class="h-5 w-5 text-accent"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                <line x1="16" y1="2" x2="16" y2="6"></line>
+                <line x1="8" y1="2" x2="8" y2="6"></line>
+                <line x1="3" y1="10" x2="21" y2="10"></line>
+              </svg>
+              <div>
+                <p class="font-semibold text-white">Predictability</p>
+                <p>Clear scope, timeline checkpoints, and decision logs.</p>
+              </div>
             </div>
-            <div>
-              <p class="font-semibold text-white">Proof</p>
-              <p>Documented outcomes, demos, and post-launch support.</p>
+            <div class="flex gap-3">
+              <svg
+                class="h-5 w-5 text-accent"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <circle cx="12" cy="12" r="9"></circle>
+                <path d="M9 12l2 2 4-4"></path>
+              </svg>
+              <div>
+                <p class="font-semibold text-white">Proof</p>
+                <p>Documented outcomes, demos, and post-launch support.</p>
+              </div>
             </div>
           </div>
         </div>
@@ -211,9 +406,24 @@
                 href="#case-telemetry"
                 class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
               >
+              <!-- View / Eye icon -->
+              <svg
+                class="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
                 View case study
               </a>
             </article>
+
             <article class="flex h-full flex-col justify-between rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
               <div class="space-y-4">
                 <h3 class="text-xl font-semibold text-white">Usage-Based Billing Platform</h3>
@@ -227,9 +437,24 @@
                 href="#case-billing"
                 class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
               >
+              <!-- View / Eye icon -->
+              <svg
+                class="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
                 View case study
               </a>
             </article>
+
             <article class="flex h-full flex-col justify-between rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
               <div class="space-y-4">
                 <h3 class="text-xl font-semibold text-white">Customer Success Command Center</h3>
@@ -243,6 +468,20 @@
                 href="#case-success"
                 class="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
               >
+              <!-- View / Eye icon -->
+              <svg
+                class="h-4 w-4"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M1 12s4-7 11-7 11 7 11 7-4 7-11 7S1 12 1 12z"></path>
+                <circle cx="12" cy="12" r="3"></circle>
+              </svg>
                 View case study
               </a>
             </article>
@@ -326,21 +565,67 @@
           </div>
           <div class="mt-10 grid gap-6 lg:grid-cols-3">
             <article class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-              <h3 class="text-xl font-semibold text-white">MVP Build</h3>
+              <h3 class="text-xl font-semibold text-white inline-flex items-center gap-2">
+                <svg
+                  class="h-5 w-5 text-accent"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+                  <line x1="3" y1="9" x2="21" y2="9"></line>
+                  <line x1="9" y1="9" x2="9" y2="21"></line>
+                </svg>
+                MVP Build
+              </h3>
               <p class="mt-2 text-sm text-slate-300">Scope: Discovery, UX flows, core feature build, launch checklist.</p>
               <p class="mt-2 text-sm text-slate-300">Outcome: Revenue-ready MVP with documented roadmap.</p>
               <p class="mt-2 text-sm text-slate-300">Timeline: 6–10 weeks.</p>
               <p class="mt-2 text-sm text-slate-300">Risk reducers: Scope lock, weekly demos, release playbook.</p>
             </article>
             <article class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-              <h3 class="text-xl font-semibold text-white">Performance &amp; Reliability Sprint</h3>
+              <h3 class="text-xl font-semibold text-white inline-flex items-center gap-2">
+                <svg
+                  class="h-5 w-5 text-accent"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+                Performance &amp; Reliability Sprint
+              </h3>
               <p class="mt-2 text-sm text-slate-300">Scope: Audit, bottleneck fixes, observability setup, regression tests.</p>
               <p class="mt-2 text-sm text-slate-300">Outcome: Faster load times and stable releases.</p>
               <p class="mt-2 text-sm text-slate-300">Timeline: 2–4 weeks.</p>
               <p class="mt-2 text-sm text-slate-300">Risk reducers: Before/after benchmarks, rollback plan.</p>
             </article>
             <article class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-              <h3 class="text-xl font-semibold text-white">Integrations &amp; Automations</h3>
+              <h3 class="text-xl font-semibold text-white inline-flex items-center gap-2">
+                <svg
+                  class="h-5 w-5 text-accent"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M10 13a5 5 0 0 1 0-7l1.5-1.5a5 5 0 0 1 7 7L17 13"></path>
+                  <path d="M14 11a5 5 0 0 1 0 7L12.5 20.5a5 5 0 0 1-7-7L7 11"></path>
+                </svg>
+                Integrations &amp; Automations
+              </h3>
               <p class="mt-2 text-sm text-slate-300">Scope: API integrations, data syncs, automation workflows.</p>
               <p class="mt-2 text-sm text-slate-300">Outcome: Operational hours returned to the team.</p>
               <p class="mt-2 text-sm text-slate-300">Timeline: 2–5 weeks.</p>
@@ -361,7 +646,24 @@
           </div>
           <div class="mt-10 grid gap-6 lg:grid-cols-3">
             <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-              <h3 class="text-lg font-semibold text-white">Timeline</h3>
+              <h3 class="text-lg font-semibold text-white inline-flex items-center gap-2">
+                <svg
+                  class="h-5 w-5 text-accent"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                  <line x1="16" y1="2" x2="16" y2="6"></line>
+                  <line x1="8" y1="2" x2="8" y2="6"></line>
+                  <line x1="3" y1="10" x2="21" y2="10"></line>
+                </svg>
+                Timeline
+              </h3>
               <ul class="mt-3 space-y-2 text-sm text-slate-300">
                 <li>Week 1: Discovery + technical plan.</li>
                 <li>Weeks 2–5: Build, demos, and QA.</li>
@@ -369,7 +671,21 @@
               </ul>
             </div>
             <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-              <h3 class="text-lg font-semibold text-white">Communication</h3>
+              <h3 class="text-lg font-semibold text-white inline-flex items-center gap-2">
+                <svg
+                  class="h-5 w-5 text-accent"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z"></path>
+                </svg>
+                Communication
+              </h3>
               <ul class="mt-3 space-y-2 text-sm text-slate-300">
                 <li>Weekly roadmap update + demo video.</li>
                 <li>Daily async check-ins (Slack or email).</li>
@@ -377,7 +693,22 @@
               </ul>
             </div>
             <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-              <h3 class="text-lg font-semibold text-white">Typical Delivery Window</h3>
+              <h3 class="text-lg font-semibold text-white inline-flex items-center gap-2">
+                <svg
+                  class="h-5 w-5 text-accent"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  aria-hidden="true"
+                >
+                  <circle cx="12" cy="12" r="9"></circle>
+                  <path d="M12 7v5l3 2"></path>
+                </svg>
+                Typical Delivery Window
+              </h3>
               <ul class="mt-3 space-y-2 text-sm text-slate-300">
                 <li>Small MVPs: 6–8 weeks.</li>
                 <li>Complex builds: 8–12 weeks.</li>
@@ -408,20 +739,67 @@
             </div>
             <div class="space-y-6">
               <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-                <h3 class="text-lg font-semibold text-white">Open Source</h3>
+                <h3 class="text-lg font-semibold text-white inline-flex items-center gap-2">
+                  <svg
+                    class="h-5 w-5 text-accent"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="6" cy="6" r="3"></circle>
+                    <circle cx="6" cy="18" r="3"></circle>
+                    <circle cx="18" cy="12" r="3"></circle>
+                    <path d="M9 6h5a4 4 0 0 1 4 4v0"></path>
+                    <path d="M9 18h5a4 4 0 0 0 4-4v0"></path>
+                  </svg>
+                  Open Source
+                </h3>
                 <ul class="mt-3 space-y-3 text-sm text-slate-300">
                   <li>
-                    <a href="https://github.com/placeholder" class="text-accent hover:underline">github.com/placeholder</a>
+                    <a href="https://github.com/placeholder" class="text-accent hover:underline inline-flex items-center gap-2">
+                      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                          d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.17-3.37-1.17-.45-1.14-1.1-1.44-1.1-1.44-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.28.1-2.67 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.51.33 1.9-1.29 2.74-1.02 2.74-1.02.55 1.39.2 2.42.1 2.67.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"
+                        ></path>
+                      </svg>
+                      github.com/placeholder
+                    </a>
                     <p class="text-xs text-slate-400">Maintained utilities and starter templates (placeholder links).</p>
                   </li>
                   <li>
-                    <a href="https://github.com/placeholder" class="text-accent hover:underline">github.com/placeholder</a>
+                    <a href="https://github.com/placeholder" class="text-accent hover:underline inline-flex items-center gap-2">
+                      <svg class="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path
+                          d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.17-3.37-1.17-.45-1.14-1.1-1.44-1.1-1.44-.9-.62.07-.61.07-.61 1 .07 1.53 1.03 1.53 1.03.9 1.53 2.36 1.09 2.94.83.09-.65.35-1.09.63-1.34-2.22-.25-4.56-1.11-4.56-4.95 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.28.1-2.67 0 0 .84-.27 2.75 1.02A9.56 9.56 0 0 1 12 6.8c.85 0 1.71.11 2.51.33 1.9-1.29 2.74-1.02 2.74-1.02.55 1.39.2 2.42.1 2.67.64.7 1.03 1.59 1.03 2.68 0 3.85-2.34 4.7-4.57 4.95.36.31.68.92.68 1.85v2.74c0 .26.18.58.69.48A10 10 0 0 0 12 2Z"
+                        ></path>
+                      </svg>
+                      github.com/placeholder
+                    </a>
                     <p class="text-xs text-slate-400">CLI tooling for SaaS workflows (placeholder links).</p>
                   </li>
                 </ul>
               </div>
               <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-                <h3 class="text-lg font-semibold text-white">Recent activity</h3>
+                <h3 class="text-lg font-semibold text-white inline-flex items-center gap-2">
+                  <svg
+                    class="h-5 w-5 text-accent"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 7v5l3 2"></path>
+                  </svg>
+                  Recent activity
+                </h3>
                 <p class="mt-2 text-sm text-slate-300">Currently shipping a new billing workflow and performance dashboard refresh.</p>
                 <p class="mt-3 text-xs uppercase tracking-[0.2em] text-slate-400">Updated this week</p>
               </div>
@@ -473,25 +851,84 @@
                 </div>
                 <button
                   type="submit"
-                  class="w-full rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-slate-950 shadow-soft transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
+                  class="w-full rounded-xl bg-accent px-6 py-3 text-sm font-semibold text-slate-950 shadow-soft transition hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent inline-flex items-center justify-center gap-2"
                 >
+                  <!-- Send / Submit icon -->
+                  <svg
+                    class="h-4 w-4"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M22 2L11 13"></path>
+                    <path d="M22 2L15 22l-4-9-9-4 20-7z"></path>
+                  </svg>
                   Send inquiry
                 </button>
               </form>
             </div>
             <div class="space-y-6">
               <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-                <h3 class="text-lg font-semibold text-white">Calendly</h3>
+                <h3 class="text-lg font-semibold text-white inline-flex items-center gap-2">
+                  <svg
+                    class="h-5 w-5 text-accent"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <rect x="3" y="4" width="18" height="18" rx="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                  Calendly
+                </h3>
                 <p class="mt-2 text-sm text-slate-300">Use this placeholder to schedule a call.</p>
                 <a
                   href="https://calendly.com/placeholder"
                   class="mt-4 inline-flex items-center gap-2 rounded-xl border border-slate-700 px-4 py-2 text-sm font-semibold text-slate-200 hover:border-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent"
                 >
+                  <svg
+                    class="h-4 w-4 text-accent"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <circle cx="12" cy="12" r="9"></circle>
+                    <path d="M12 7v5l3 2"></path>
+                  </svg>
                   calendly.com/placeholder
                 </a>
               </div>
               <div class="rounded-xl border border-slate-800 bg-slate-900 p-6 shadow-soft">
-                <h3 class="text-lg font-semibold text-white">Availability</h3>
+                <h3 class="text-lg font-semibold text-white inline-flex items-center gap-2">
+                  <svg
+                    class="h-5 w-5 text-accent"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    aria-hidden="true"
+                  >
+                    <path d="M12 21s-6-5.5-6-10a6 6 0 0 1 12 0c0 4.5-6 10-6 10z"></path>
+                    <circle cx="12" cy="11" r="2"></circle>
+                  </svg>
+                  Availability
+                </h3>
                 <p class="mt-2 text-sm text-slate-300">Next open start window: four weeks out.</p>
                 <p class="mt-2 text-sm text-slate-300">Based in GMT+2 with overlap for US/EU teams.</p>
               </div>
@@ -505,9 +942,56 @@
       <div class="mx-auto flex max-w-6xl flex-col items-start justify-between gap-4 px-6 text-sm text-slate-400 md:flex-row md:items-center">
         <p>© 2024 Omar Aoun. All rights reserved.</p>
         <div class="flex items-center gap-4">
-          <a href="#work" class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Work</a>
-          <a href="#services" class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Services</a>
-          <a href="#contact" class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent">Contact</a>
+          <a href="#work" class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent inline-flex items-center gap-2">
+            <svg
+              class="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="7" height="7"></rect>
+              <rect x="14" y="3" width="7" height="7"></rect>
+              <rect x="3" y="14" width="7" height="7"></rect>
+              <rect x="14" y="14" width="7" height="7"></rect>
+            </svg>
+            Work
+          </a>
+          <a href="#services" class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent inline-flex items-center gap-2">
+            <svg
+              class="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <rect x="3" y="3" width="18" height="18" rx="2"></rect>
+              <line x1="3" y1="9" x2="21" y2="9"></line>
+              <line x1="9" y1="9" x2="9" y2="21"></line>
+            </svg>
+            Services
+          </a>
+          <a href="#contact" class="hover:text-accent focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-accent inline-flex items-center gap-2">
+            <svg
+              class="h-4 w-4"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              aria-hidden="true"
+            >
+              <path d="M21 15a4 4 0 0 1-4 4H7l-4 3V7a4 4 0 0 1 4-4h10a4 4 0 0 1 4 4v8z"></path>
+            </svg>
+            Contact
+          </a>
         </div>
       </div>
     </footer>
@@ -515,19 +999,35 @@
     <script>
       const toggleButton = document.getElementById("theme-toggle");
       const root = document.documentElement;
+      const sunIcon = document.getElementById("icon-sun");
+      const moonIcon = document.getElementById("icon-moon");
+
+      function updateThemeIcon() {
+        if (root.classList.contains("dark")) {
+          sunIcon.classList.remove("hidden");
+          moonIcon.classList.add("hidden");
+        } else {
+          moonIcon.classList.remove("hidden");
+          sunIcon.classList.add("hidden");
+        }
+      }
 
       toggleButton.addEventListener("click", () => {
         root.classList.toggle("dark");
+
         if (root.classList.contains("dark")) {
           document.body.classList.remove("bg-slate-50", "text-slate-900");
           document.body.classList.add("bg-slate-950", "text-slate-100");
-          toggleButton.textContent = "Toggle light";
         } else {
           document.body.classList.remove("bg-slate-950", "text-slate-100");
           document.body.classList.add("bg-slate-50", "text-slate-900");
-          toggleButton.textContent = "Toggle dark";
         }
+
+        updateThemeIcon();
       });
+
+      // Initialize correct icon on page load
+      updateThemeIcon();
     </script>
   </body>
 </html>
